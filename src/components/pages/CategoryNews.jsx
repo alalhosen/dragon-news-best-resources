@@ -1,14 +1,12 @@
-import React from 'react';
-import { useParams } from 'react-router';
+import React from "react";
+import {  useLoaderData, useParams } from "react-router";
 
 const CategoryNews = () => {
-    const {id} = useParams();
-    console.log(id)
-    return (
-        <div>
-            categoryNews - {id}
-        </div>
-    );
+  const { id } = useParams();
+  const data = useLoaderData();
+  console.log(id, data);
+
+  return <div>categoryNews - {id}</div>;
 };
 
-export default CategoryNews;  
+export default CategoryNews;
