@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router";
 
 const CategoryNews = () => {
   const { id } = useParams();
   const data = useLoaderData();
+  const [categoryNews, setCategoryNews] = useState();
   //   console.log(id, data);
   useEffect(() => {
     const filteredNews = data.filter((news) => news.category_id == id);
