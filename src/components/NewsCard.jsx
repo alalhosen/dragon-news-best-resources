@@ -1,21 +1,8 @@
 import React from "react";
-import {
-  FaRegBookmark,
-  FaShareAlt,
-  FaEye,
-  FaStar,
-} from "react-icons/fa";
+import { FaRegBookmark, FaShareAlt, FaEye, FaStar } from "react-icons/fa";
 
 const NewsCard = ({ news }) => {
-  const {
-    title,
-    rating,
-    total_view,
-    author,
-    image_url,
-    details,
-    tags,
-  } = news;
+  const { title, rating, total_view, author, image_url, details, tags } = news;
 
   const date = new Date(author.published_date).toLocaleDateString("en-US", {
     year: "numeric",
@@ -25,7 +12,6 @@ const NewsCard = ({ news }) => {
 
   return (
     <div className="card bg-base-100 border border-base-300 shadow-sm rounded-md">
-      
       {/* Author Section */}
       <div className="flex items-center justify-between p-4 border-b border-base-300">
         <div className="flex items-center gap-3">
@@ -36,13 +22,9 @@ const NewsCard = ({ news }) => {
           />
 
           <div>
-            <h3 className="font-semibold text-sm">
-              {author.name}
-            </h3>
+            <h3 className="font-semibold text-sm">{author.name}</h3>
 
-            <p className="text-xs text-gray-500">
-              {date}
-            </p>
+            <p className="text-xs text-gray-500">{date}</p>
           </div>
         </div>
 
@@ -60,11 +42,8 @@ const NewsCard = ({ news }) => {
 
       {/* News Content */}
       <div className="p-4">
-
         {/* Title */}
-        <h2 className="text-xl font-bold leading-7 mb-4">
-          {title}
-        </h2>
+        <h2 className="text-xl font-bold leading-7 mb-4">{title}</h2>
 
         {/* News Image */}
         <img
@@ -75,61 +54,46 @@ const NewsCard = ({ news }) => {
 
         {/* Details */}
         <div className="mt-5">
-          <p className="text-sm text-gray-500 leading-6">
-            {details}
-          </p>
-
-          {/* Tags */}
-          <div className="flex flex-wrap gap-2 mt-3">
-            {tags?.map((tag) => (
-              <span
-                key={tag}
-                className="badge badge-ghost"
-              >
-                #{tag}
-              </span>
-            ))}
+          <div className="px-4 text-sm text-gray-700">
+            {details.length > 200 ? (
+              <>
+                {details.slice(0, 200)}...
+                <span className="text-secondary font-semibold cursor-pointer hover:underline">
+                  Read More
+                </span>
+              </>
+            ) : (
+              details
+            )}
           </div>
-
-          {/* Read More */}
-          <button className="text-orange-500 font-semibold text-sm mt-2">
-            Read More
-          </button>
         </div>
       </div>
 
       {/* Bottom Section */}
       <div className="flex items-center justify-between border-t border-base-300 px-4 py-3">
-
         {/* Rating */}
         <div className="flex items-center gap-1">
           {[...Array(5)].map((_, index) => (
             <FaStar
               key={index}
               className={
-                index < rating.number
-                  ? "text-orange-400"
-                  : "text-gray-300"
+                index < rating.number ? "text-orange-400" : "text-gray-300"
               }
               size={15}
             />
           ))}
 
-          <span className="ml-2 text-sm font-medium">
-            {rating.number}.0
-          </span>
+          <span className="ml-2 text-sm font-medium">{rating.number}.0</span>
         </div>
 
         {/* Views */}
         <div className="flex items-center gap-2 text-gray-500">
           <FaEye size={16} />
-          <span className="text-sm">
-            {total_view.toLocaleString()}
-          </span>
+          <span className="text-sm">{total_view.toLocaleString()}</span>
         </div>
       </div>
     </div>
   );
 };
 
-export default NewsCard;  
+export default NewsCard;
