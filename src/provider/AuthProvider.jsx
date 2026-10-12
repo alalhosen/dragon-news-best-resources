@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { createContext, useState } from "react";
 
+export const AuthContext = createContext();
 const AuthProvider = () => {
-    return (
-        <div>
-            
-        </div>
-    );
+  const [user, setUser] = useState({
+    name: "hablu mia",
+    email: "hablu@mia.com",
+  });
+  return;
+  <AuthContext></AuthContext>;
 };
 
 export default AuthProvider;
