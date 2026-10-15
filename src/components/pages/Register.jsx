@@ -4,6 +4,12 @@ const Register = () => {
   const handleRegister = (e) => {
     e.preventDefault();
     console.log(e.terget);
+    const form = e.target;
+    const name = form.name.value;
+    const photo = form.photo.value;
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log({name,photo,email,password});
   };
   return (
     <div className="flex justify-center min-h-screen items-center">
@@ -15,15 +21,35 @@ const Register = () => {
           <fieldset className="fieldset">
             {/* Name */}
             <label className="label">Your Name</label>
-            <input type="text" className="input" placeholder="Your Name" />
+            <input
+              name="name"
+              type="text"
+              className="input"
+              placeholder="Your Name"
+            />
             {/* Photo url */}
             <label className="label">Photo URL</label>
-            <input type="email" className="input" placeholder="Photo URL" />
+            <input
+              name="photo"
+              type="email"
+              className="input"
+              placeholder="Photo URL"
+            />
             {/* Email */}
             <label className="label">Email</label>
-            <input type="email" className="input" placeholder="Email" />
+            <input
+              name="email"
+              type="email"
+              className="input"
+              placeholder="Email"
+            />
             {/* Password */}
-            <input type="password" className="input" placeholder="Password" />
+            <input
+              name="password"
+              type="password"
+              className="input"
+              placeholder="Password"
+            />
             <button type="submit" className="btn btn-neutral mt-4">
               Register
             </button>
