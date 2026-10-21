@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 
 const Register = () => {
-  const handleRegister = (e) => {
+  const handleRegister = (e) => { 
     e.preventDefault();
     console.log(e.terget);
     const form = e.target;
