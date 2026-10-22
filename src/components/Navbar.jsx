@@ -12,6 +12,7 @@ const Navbar = () => {
         <NavLink to="/">Home</NavLink>
         <NavLink to="/about">About</NavLink>
         <NavLink to="/carrer">Carrer</NavLink>
+        <NavLink>Update</NavLink>
       </div>
       <div className="login-btn flex gap-5">
         <img src={userIcon} alt="" />
