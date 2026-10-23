@@ -1,7 +1,9 @@
+import { use } from "react";
 import { Link } from "react-router";
 
 const Register = () => {
-  const handleRegister = (e) => { 
+  const { createUser } = use(AuthContext);
+  const handleRegister = (e) => {
     e.preventDefault();
     console.log(e.terget);
     const form = e.target;
@@ -9,7 +11,7 @@ const Register = () => {
     const photo = form.photo.value;
     const email = form.email.value;
     const password = form.password.value;
-    console.log({name,photo,email,password});
+    console.log({ name, photo, email, password });
   };
   return (
     <div className="flex justify-center min-h-screen items-center">
