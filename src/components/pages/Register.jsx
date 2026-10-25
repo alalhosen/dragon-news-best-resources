@@ -28,6 +28,7 @@ const Register = () => {
               type="text"
               className="input"
               placeholder="Your Name"
+              required
             />
             {/* Photo url */}
             <label className="label">Photo URL</label>
@@ -36,6 +37,7 @@ const Register = () => {
               type="email"
               className="input"
               placeholder="Photo URL"
+              required
             />
             {/* Email */}
             <label className="label">Email</label>
@@ -44,6 +46,7 @@ const Register = () => {
               type="email"
               className="input"
               placeholder="Email"
+              reEemoc2d
             />
             {/* Password */}
             <input
@@ -51,6 +54,7 @@ const Register = () => {
               type="password"
               className="input"
               placeholder="Password"
+              required
             />
             <button type="submit" className="btn btn-neutral mt-4">
               Register
