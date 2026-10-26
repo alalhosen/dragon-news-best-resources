@@ -54,7 +54,7 @@ const Register = () => {
               type="password"
               className="input"
               placeholder="Password"
-              required
+              required 
             />
             <button type="submit" className="btn btn-neutral mt-4">
               Register
