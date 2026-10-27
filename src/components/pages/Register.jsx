@@ -12,6 +12,10 @@ const Register = () => {
     const email = form.email.value;
     const password = form.password.value;
     console.log({ name, photo, email, password });
+    createUser(email, password).then((result) => {
+      const user = result.user;
+      console.log(user)
+    });
   };
   return (
     <div className="flex justify-center min-h-screen items-center">
@@ -54,7 +58,7 @@ const Register = () => {
               type="password"
               className="input"
               placeholder="Password"
-              required 
+              required
             />
             <button type="submit" className="btn btn-neutral mt-4">
               Register
