@@ -1,10 +1,11 @@
-
 const PrivateRoute = () => {
-    return (
-        <div>
-            This is private route
-        </div>
-    );
+  return (
+    <div>
+      {title}
+      {description}
+      <img src={image_ur} alt="" />
+    </div>
+  );
 };
 
 export default PrivateRoute;
