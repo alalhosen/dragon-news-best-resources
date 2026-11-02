@@ -1,9 +1,9 @@
 const PrivateRoute = () => {
   return (
     <div>
-      {title}
+      {/* {title}
       {description}
-      <img src={image_ur} alt="" />
+      <img src={image_ur} alt="" /> */}
     </div>
   );
 };
