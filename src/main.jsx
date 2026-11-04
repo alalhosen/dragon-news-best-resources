@@ -5,11 +5,13 @@ import "./index.css";
 import { RouterProvider } from "react-router";
 import router from "./routes/router.jsx";
 import AuthProvider from "./provider/AuthProvider.jsx";
+import Footer from "./components/Footer.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <AuthProvider>
       <RouterProvider router={router}></RouterProvider>
     </AuthProvider>
+    <Footer></Footer>
   </StrictMode>,
 );
