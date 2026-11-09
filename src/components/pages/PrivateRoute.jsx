@@ -1,9 +1,9 @@
+import NewsDetails from "./NewsDetails";
+
 const PrivateRoute = () => {
   return (
     <div>
-      {/* {title}
-      {description}
-      <img src={image_ur} alt="" /> */}
+    <NewsDetails></NewsDetails>
     </div>
   );
 };
