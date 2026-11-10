@@ -1,5 +1,6 @@
 import React from "react";
 import { FaRegBookmark, FaShareAlt, FaEye, FaStar } from "react-icons/fa";
+import { NavLink } from "react-router";
 
 const NewsCard = ({ news }) => {
   const { title, rating, total_view, author, image_url, details, tags } = news;
@@ -59,7 +60,8 @@ const NewsCard = ({ news }) => {
               <>
                 {details.slice(0, 200)}...
                 <span className="text-secondary font-semibold cursor-pointer hover:underline">
-                  Read More
+                  <NavLink to="/newsDetails">Read More</NavLink>
+                  {/* Read More */}
                 </span>
               </>
             ) : (
