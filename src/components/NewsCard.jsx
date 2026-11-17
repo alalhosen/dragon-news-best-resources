@@ -1,4 +1,3 @@
-import React from "react";
 import { FaRegBookmark, FaShareAlt, FaEye, FaStar } from "react-icons/fa";
 import { NavLink } from "react-router";
 
