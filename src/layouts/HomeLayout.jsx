@@ -4,6 +4,7 @@ import LatestNews from "../components/LatestNews";
 import Navbar from "../components/Navbar";
 import LeftAside from "../components/homeLayout/LeftAside";
 import RightAside from "../components/homeLayout/RightAside";
+import Footer from "../components/Footer";
 
 const HomeLayout = () => {
   return (
@@ -25,7 +26,9 @@ const HomeLayout = () => {
         <aside className="col-span-3 sticky top-0 h-fit">
           <RightAside></RightAside>
         </aside>
+        
       </main>
+      <Footer></Footer>
     </div>
   );
 };
