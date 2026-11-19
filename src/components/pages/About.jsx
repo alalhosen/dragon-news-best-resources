@@ -1,17 +1,29 @@
+import React from "react";
 
 const About = () => {
   return (
-    <div className="hero bg-base-200 min-h-screen">
-      <div className="hero-content text-center">
-        <div className="max-w-md">
-          <h1 className="text-5xl font-bold">Dragon News</h1>
-          <p className="py-6">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut 
-            a id nisi.
-          </p>
-          <button className="btn btn-primary">Get Started</button>
-        </div>
-      </div>
+    <div>
+      <calendar-date className="cally bg-base-100 border border-base-300 shadow-lg rounded-box">
+        <svg
+          aria-label="Previous"
+          className="fill-current size-4"
+          slot="previous"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+        >
+          <path fill="currentColor" d="M15.75 19.5 8.25 12l7.5-7.5"></path>
+        </svg>
+        <svg
+          aria-label="Next"
+          className="fill-current size-4"
+          slot="next"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+        >
+          <path fill="currentColor" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path>
+        </svg>
+        <calendar-month></calendar-month>
+      </calendar-date>
     </div>
   );
 };
