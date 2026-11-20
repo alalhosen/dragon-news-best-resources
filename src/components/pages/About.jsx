@@ -3,6 +3,10 @@ import React from "react";
 const About = () => {
   return (
     <div>
+      <div>
+        <h3>Contact us </h3>
+        <h4>Mobile: 01777777777</h4>
+      </div>
       <calendar-date className="cally bg-base-100 border border-base-300 shadow-lg rounded-box">
         <svg
           aria-label="Previous"
