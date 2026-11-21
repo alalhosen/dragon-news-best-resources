@@ -1,7 +1,6 @@
-
 const Carrer = () => {
-    return (
- <div
+  return (
+   <div
   className="hero min-h-screen"
   style={{
     backgroundImage:
@@ -20,7 +19,7 @@ const Carrer = () => {
     </div>
   </div>
 </div>
-    );
+  );
 };
 
 export default Carrer;
